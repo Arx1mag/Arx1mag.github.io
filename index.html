@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calc</title>
-	
-	<link rel="icon" href="logds.ico" type="image/x-icon">
-	
     <style type="text/css">
         body {
             background-color:#121212
@@ -219,7 +216,12 @@ and (max-width : 1024px) {
 .text2 {display: none!important;}
 }
 
-
+@media only screen
+and (max-width : 1024px) {
+.script {
+    color: #ff733c;
+    text-shadow: 0px 0px 5px #ff0c0c, 0px 2px #000;
+}
         
     </style>
 
@@ -257,11 +259,10 @@ and (max-width : 1024px) {
                     summ += (1000 + (i * i * 2 * 6)) / 100 * 70;
                     console.log('summ' + summ)
                 }
-				
-                let rez = parseInt(summ / 15000);
-				if (rez == 0) rez = 1;
-
-				document.getElementById('price').textContent =  rez + '🧪';
+                
+		    let rez = parseInt(summ / 15000);
+		    if (rez == 0) rez = 1;
+			document.getElementById('price').textContent =  rez + '🧪';
             }
 
         </script>
