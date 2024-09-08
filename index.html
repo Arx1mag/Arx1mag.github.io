@@ -264,15 +264,17 @@ and (max-width : 1024px) {
                 let numStart = parseInt(str);
                 let numEnd = parseInt(nd);
 
-                console.log(numStart); 
-                console.log(numEnd);
+                console.log( 'numStart: ' + numStart); 
+                console.log( 'numEnd: ' + numEnd);
 
                 for (let i = str; i < numStart + numEnd; i++) {
-                    console.log('nd ' + (numStart + numEnd));
                     summ += (1000 + (i * i * 2 * 6)) / 100 * 70;
-                    console.log('summ' + summ)
                 }
+                console.log('nd: ' + (numStart + numEnd));
+                console.log('summ: ' + summ)
                 let rez = parseInt(summ / 15000);
+                console.log('rez: ' + rez);
+                console.log('----------------------------');
 				if (rez == 0) rez = 1;
 
 				document.getElementById('allForms').textContent =  rez;
