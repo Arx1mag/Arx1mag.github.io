@@ -2,14 +2,19 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=5.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calc</title>
+	
 	<link rel="icon" href="logds.ico" type="image/x-icon">
 	
     <style type="text/css">
         body {
             background-color:#121212
         }
+		
+		.lol{
+            width:auto;
+		}
 
         button {
             background: none;
@@ -160,7 +165,7 @@ body {
   background-color: #222;
 }
 .plate {
-  width: 550px;
+  width: 50%;
   margin: 1% auto;
 }
 .shadow {
@@ -223,13 +228,14 @@ border-radius: 150% 150%;
   <p class="shadow text2">GEKTARS</p>
   <p class="script"><span>by Leviafan</span></p>
 </div>
-
-        <p>Количество ваших гектаров:</p>
-        <input type ="number" style="border-radius: 3px; width: 260px; height: 25px" placeholder="&nbspКоличество гектаров" class="form-control" id="start">
-        <p>Сколько вы хотите купить:</p>
-        <input type ="number" style="border-radius: 3px; width: 260px; height:25px" placeholder="&nbspКоличество для покупки" class="form-control" id="end">
-        <h2 id="price" style="text-align: center; color: white;">0💎</h2>
-        <button class="glow-on-hover" type="button" onclick="SumPrice()" >Расчитать стоимость</button>
+		<div class = "lol">
+			<p>Количество ваших гектаров:</p>
+			<input type ="number" style="border-radius: 3px; width: 260px; height: 25px" placeholder="&nbspКоличество гектаров" class="form-control" id="start">
+			<p>Сколько вы хотите купить:</p>
+			<input type ="number" style="border-radius: 3px; width: 260px; height:25px" placeholder="&nbspКоличество для покупки" class="form-control" id="end">
+			<h2 id="price" style="text-align: center; color: white;">0💎</h2>
+			<button class="glow-on-hover" type="button" onclick="SumPrice()" >Расчитать стоимость</button>
+		</div>
         <script>
             function SumPrice() {
                 let summ = 0;
@@ -253,9 +259,8 @@ border-radius: 150% 150%;
 
                 if (rez == 0) rez = 1;
 
-                document.getElementById('price').textContent =  rez + '💎';
+                document.getElementById('price').textContent =  rez + '🧪';
             }
         </script>
-    </div>
 </body>
 </html>
