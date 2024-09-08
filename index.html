@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calc</title>
+    <title>VENOM-GEKTARS</title>
+	
+	<link rel="icon" href="logds.ico" type="image/x-icon">
+	
     <style type="text/css">
         body {
             background-color:#121212
@@ -209,6 +212,16 @@ border-radius: 150% 150%;
 .text3 {
   font-size: 100px;
 }	
+
+.mylogo { 
+padding: 0px 0px 0px 4px;
+width: 24px;
+height: 24px;
+margin: 0px 0px -4px 0px;
+ }
+
+
+
 		
 		
 @media only screen
@@ -239,7 +252,7 @@ and (max-width : 1024px) {
         <input type ="number" style="border-radius: 3px; width: 260px; height: 25px" placeholder="&nbspКоличество гектаров" class="form-control" id="start">
         <p>Сколько вы хотите купить:</p>
         <input type ="number" style="border-radius: 3px; width: 260px; height:25px" placeholder="&nbspКоличество для покупки" class="form-control" id="end">
-        <h2 id="price" style="text-align: center; color: white;">0🧪</h2>
+        <h2 id="price" style="text-align: center; color: white;"><span id="allForms">0</span><img class="mylogo" src="https://media.discordapp.net/attachments/1247239991088648223/1282304710161989694/flask.png?ex=66deded2&is=66dd8d52&hm=194f04c53527d0bf123c06db9dbb3921f94ebd82b99a9a43976cd892f0f1e4e8&=&format=webp&quality=lossless" title=""></h2>
         <button class="glow-on-hover" type="button" onclick="SumPrice()" >Расчитать стоимость</button>
         <script>
             function SumPrice() {
@@ -259,10 +272,10 @@ and (max-width : 1024px) {
                     summ += (1000 + (i * i * 2 * 6)) / 100 * 70;
                     console.log('summ' + summ)
                 }
-                
-		    let rez = parseInt(summ / 15000);
-		    if (rez == 0) rez = 1;
-			document.getElementById('price').textContent =  rez + '🧪';
+                let rez = parseInt(summ / 15000);
+				if (rez == 0) rez = 1;
+
+				document.getElementById('allForms').textContent =  rez;
             }
 
         </script>
