@@ -11,10 +11,6 @@
         body {
             background-color:#121212
         }
-		
-		.lol{
-            width:auto;
-		}
 
         button {
             background: none;
@@ -165,8 +161,12 @@ body {
   background-color: #222;
 }
 .plate {
-  width: 50%;
-  margin: 1% auto;
+   margin: 0 auto;
+    display: block;
+    margin: 0 auto;
+    outline-width: 0;
+  
+  
 }
 .shadow {
   color: #ff4626;
@@ -211,15 +211,14 @@ border-radius: 150% 150%;
 }
 .text3 {
   font-size: 100px;
-}
-	    
+}	
+		
+		
 @media only screen
-and (max-width : 900px) {
-.text2 {font-size: 30px;}
-}    
-		
-		
-		
+and (max-width : 1024px) {
+.text2 {display: none!important;}
+}
+
 
         
     </style>
@@ -230,17 +229,16 @@ and (max-width : 900px) {
 	
 <div class="plate">
   <p class="shadow text1">VENOM</p>
-  <p class="shadow text2" style="text-align: center">GEKTARS</p>
+  <p class="shadow text2">GEKTARS</p>
   <p class="script"><span>by Leviafan</span></p>
 </div>
-		<div class = "lol">
-			<p>Количество ваших гектаров:</p>
-			<input type ="number" style="border-radius: 3px; width: 260px; height: 25px" placeholder="&nbspКоличество гектаров" class="form-control" id="start">
-			<p>Сколько вы хотите купить:</p>
-			<input type ="number" style="border-radius: 3px; width: 260px; height:25px" placeholder="&nbspКоличество для покупки" class="form-control" id="end">
-			<h2 id="price" style="text-align: center; color: white;">0💎</h2>
-			<button class="glow-on-hover" type="button" onclick="SumPrice()" >Расчитать стоимость</button>
-		</div>
+
+        <p>Количество ваших гектаров:</p>
+        <input type ="number" style="border-radius: 3px; width: 260px; height: 25px" placeholder="&nbspКоличество гектаров" class="form-control" id="start">
+        <p>Сколько вы хотите купить:</p>
+        <input type ="number" style="border-radius: 3px; width: 260px; height:25px" placeholder="&nbspКоличество для покупки" class="form-control" id="end">
+        <h2 id="price" style="text-align: center; color: white;">0💎</h2>
+        <button class="glow-on-hover" type="button" onclick="SumPrice()" >Расчитать стоимость</button>
         <script>
             function SumPrice() {
                 let summ = 0;
@@ -259,13 +257,14 @@ and (max-width : 900px) {
                     summ += (1000 + (i * i * 2 * 6)) / 100 * 70;
                     console.log('summ' + summ)
                 }
-
+				
                 let rez = parseInt(summ / 15000);
+				if (rez == 0) rez = 1;
 
-                if (rez == 0) rez = 1;
-
-                document.getElementById('price').textContent =  rez + '🧪';
+				document.getElementById('price').textContent =  rez + '🧪';
             }
+
         </script>
+    </div>
 </body>
 </html>
